@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Επαναφορά κωδικού προπονητή",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"server",
+				"run",
+				"reset:trainer-password"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Εκκίνηση server και εφαρμογής",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"${workspaceFolder}\\server\\scripts\\start-local-app.ps1"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}

@@ -1,0 +1,3248 @@
+.application-shell {
+  width: min(100% - 48px, 980px);
+  padding-bottom: 28px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.application-shell .topbar {
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  height: 76px;
+  gap: 8px;
+  border-bottom-color: rgb(224 232 227 / 70%);
+  background: rgb(244 247 244 / 90%);
+  backdrop-filter: blur(16px);
+}
+
+.application-shell .brand {
+  min-width: 0;
+  gap: 10px;
+  font-size: 17px;
+  letter-spacing: -0.045em;
+}
+
+.application-shell .brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 13px;
+}
+
+.theme-toggle {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.theme-toggle svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.application-shell .theme-toggle {
+  margin-left: auto;
+}
+
+.button-feedback {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.button-spinner {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: button-spinner-rotate 700ms linear infinite;
+}
+
+@keyframes button-spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.application-shell .intro {
+  max-width: none;
+  padding: 38px 0 24px;
+}
+
+.application-shell .intro .eyebrow {
+  margin-bottom: 8px;
+  color: var(--accent-strong);
+}
+
+.application-shell .intro h1 {
+  margin-bottom: 0;
+  font-size: clamp(31px, 4vw, 44px);
+  letter-spacing: -0.055em;
+}
+
+.app-navigation {
+  position: sticky;
+  z-index: 4;
+  top: 76px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 18px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgb(255 255 255 / 86%);
+  box-shadow: 0 8px 30px rgb(32 60 49 / 5%);
+  backdrop-filter: blur(14px);
+}
+
+.app-nav-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 16px;
+  border-radius: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 150ms ease, background 150ms ease;
+}
+
+.app-nav-link svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.app-nav-link:hover,
+.app-nav-link.is-active {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.application-shell .booking-layout {
+  display: block;
+}
+
+.application-shell .slots-panel,
+.application-shell .my-bookings,
+.application-shell .trainer-panel,
+.application-shell .ai-panel {
+  margin-top: 0;
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: 0 10px 34px rgb(32 60 49 / 5%);
+  scroll-margin-top: 145px;
+}
+
+.application-shell .my-bookings,
+.application-shell .ai-panel,
+.application-shell .trainer-panel + .trainer-panel {
+  margin-top: 18px;
+}
+
+.application-shell .section-heading {
+  align-items: center;
+  margin-bottom: 19px;
+}
+
+.application-shell .trainer-schedule-heading {
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.application-shell .section-heading.trainer-schedule-heading h2 {
+  min-width: 0;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.application-shell .section-heading h2 {
+  font-size: 22px;
+  letter-spacing: -0.045em;
+}
+
+.application-shell .eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.application-shell .availability-label {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #f0f5ef;
+  color: var(--accent-strong);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.application-shell .slot-list {
+  gap: 10px;
+}
+
+.application-shell .slot-card {
+  min-height: 76px;
+  padding: 14px;
+  border-color: #e7ece8;
+  border-radius: 15px;
+  box-shadow: none;
+}
+
+.application-shell .slot-date {
+  gap: 4px;
+}
+
+.application-shell .slot-date strong {
+  font-size: 18px;
+  letter-spacing: -0.025em;
+}
+
+.application-shell .book-button,
+.application-shell .cancel-button {
+  min-height: 46px;
+  padding: 0 17px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.application-shell .book-button {
+  border-color: var(--accent-strong);
+  background: var(--accent-strong);
+}
+
+.application-shell .book-button:hover:not(:disabled) {
+  border-color: #194a3b;
+  background: #194a3b;
+}
+
+.application-shell .cancel-button {
+  border-color: var(--line);
+  background: #fff;
+}
+
+.application-shell .name-field {
+  gap: 9px;
+  font-size: 13px;
+}
+
+.application-shell .name-field input,
+.application-shell .move-field select {
+  min-height: 48px;
+  border-color: #dce5df;
+  border-radius: 12px;
+  background-color: #fbfcfb;
+  font-size: 15px;
+}
+
+.application-shell .move-field {
+  font-size: 12px;
+}
+
+.application-shell .trainer-add-form {
+  margin-bottom: 18px;
+}
+
+.application-shell .trainer-slot-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: end;
+  gap: 10px;
+}
+
+.application-shell .trainer-slot-form > .name-field,
+.application-shell .trainer-slot-form > .name-field input {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.application-shell .trainer-slot-form > .name-field input {
+  box-sizing: border-box;
+  display: block;
+  min-height: 48px;
+  font-size: 16px;
+}
+
+.application-shell .trainer-slot-form > .book-button {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.trainer-add-slot-fab {
+  position: fixed;
+  z-index: 11;
+  right: max(16px, calc((100vw - 480px) / 2 + 16px));
+  bottom: calc(84px + env(safe-area-inset-bottom));
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: #24513c;
+  color: #fff;
+  box-shadow: 0 6px 20px rgb(20 45 31 / 28%);
+  cursor: pointer;
+}
+
+.trainer-add-slot-fab svg {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.trainer-add-slot-fab:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.trainer-slot-sheet-form {
+  display: flex;
+  min-height: 0;
+  min-width: 0;
+  max-width: 100%;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.slot-sheet-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 0;
+  min-width: 0;
+  flex: 1 1 auto;
+  align-content: start;
+  gap: 16px;
+  padding: 4px 20px 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.slot-sheet-footer {
+  flex: 0 0 auto;
+  padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.slot-sheet-footer .book-button {
+  width: 100%;
+  min-height: 52px;
+}
+
+.slot-footer-hint {
+  margin-top: 8px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.slot-picker-month {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.time-picker {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.time-picker-selects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.time-picker-field {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.time-picker-field select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 52px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+  line-height: 52px;
+  text-align: center;
+  text-align-last: center;
+}
+
+.time-picker-add {
+  min-height: 48px;
+  border-color: var(--accent-strong);
+}
+
+.time-picker-add:disabled {
+  border-color: var(--line);
+  text-decoration: none;
+}
+
+.slot-picker-group {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+
+.slot-picker-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.slot-picker-hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.field-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.trainer-slot-sheet-form .day-strip {
+  margin: 0;
+  scrollbar-width: none;
+}
+
+.trainer-slot-sheet-form .day-strip::-webkit-scrollbar {
+  display: none;
+}
+
+:root[data-theme='dark'] .bottom-sheet {
+  color-scheme: dark;
+}
+
+.time-chips {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+  gap: 8px;
+}
+
+.time-chip {
+  min-width: 0;
+  min-height: 48px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.time-chip[aria-pressed='true'] {
+  border-color: var(--accent-strong);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent-strong);
+}
+
+.time-chip:disabled {
+  color: var(--muted);
+  cursor: not-allowed;
+  opacity: 0.55;
+  text-decoration: line-through;
+}
+
+.time-chip-other {
+  border-style: dashed;
+}
+
+.time-chips > .time-chip-other {
+  grid-column: span 2;
+}
+
+.time-chip:focus-visible,
+.day-chip:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.native-field {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.native-field input[type='date'],
+.native-field input[type='time'] {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+  text-align: left;
+}
+
+.native-field-placeholder {
+  position: absolute;
+  inset: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  border-radius: 13px;
+  background: var(--paper);
+  color: var(--muted);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.app-toast {
+  position: fixed;
+  z-index: 30;
+  right: 16px;
+  bottom: calc(64px + env(safe-area-inset-bottom) + 76px);
+  left: 16px;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--ink);
+  color: var(--page);
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 8px 30px rgb(0 0 0 / 25%);
+}
+
+.application-shell .trainer-actions {
+  gap: 8px;
+}
+
+.application-shell .trainer-booking-status {
+  font-size: 12px;
+}
+
+.trainer-day-groups {
+  display: grid;
+  gap: 18px;
+}
+
+.trainer-day-group {
+  min-width: 0;
+}
+
+.trainer-day-group > h3 {
+  margin: 0;
+  padding: 10px 0 4px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.application-shell .trainer-slot-list {
+  margin: 0;
+}
+
+.application-shell .trainer-slot-card,
+.application-shell .trainer-client-compact {
+  min-width: 0;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.trainer-slot-time {
+  flex: 0 0 54px;
+  color: var(--ink);
+  font-size: 19px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.application-shell .trainer-booking-status {
+  display: inline-flex;
+  min-width: 0;
+  max-width: 100%;
+  align-items: center;
+  gap: 5px;
+  margin-right: auto;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: #e7f3e9;
+  color: #24513c;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.application-shell .trainer-booking-status > span {
+  min-width: 0;
+}
+
+.application-shell .trainer-booking-status.is-booked {
+  background: #fff0db;
+  color: #713b0b;
+}
+
+.application-shell .trainer-booking-status.is-booked > span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.application-shell .trainer-booking-status svg {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.trainer-slot-controls,
+.application-shell .trainer-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 4px;
+  width: auto;
+}
+
+.application-shell .trainer-icon-button {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.application-shell .trainer-icon-button.is-destructive {
+  color: #8b2d24;
+}
+
+.application-shell .trainer-icon-button svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.application-shell .trainer-icon-button:focus-visible {
+  outline: 3px solid var(--accent-strong);
+  outline-offset: 2px;
+}
+
+.application-shell .trainer-icon-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.application-shell .profile-button {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.application-shell .profile-button svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.application-shell .profile-button:focus-visible {
+  outline: 3px solid var(--accent-strong);
+  outline-offset: 2px;
+}
+
+.profile-menu {
+  display: grid;
+  gap: 10px;
+}
+
+.profile-menu .profile-action {
+  display: flex;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.profile-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
+}
+
+.profile-user {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.profile-user strong {
+  color: var(--ink);
+}
+
+.profile-avatar {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+:root[data-theme='dark'] .profile-avatar {
+  background: #2b3a2d;
+  color: #a5d47a;
+}
+
+.profile-section {
+  display: grid;
+  gap: 8px;
+}
+
+.profile-section-label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.theme-segmented {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--accent-soft);
+}
+
+:root[data-theme='dark'] .theme-segmented {
+  background: #1a211c;
+}
+
+.theme-segment {
+  display: flex;
+  min-width: 0;
+  min-height: 48px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 4px 2px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.theme-segment svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.theme-segment.is-selected {
+  background: var(--accent-strong);
+  color: #fff;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
+}
+
+:root[data-theme='dark'] .theme-segment.is-selected {
+  background: #a5d47a;
+  color: #172218;
+}
+
+.theme-segment:focus-visible {
+  outline: 3px solid var(--accent-strong);
+  outline-offset: 1px;
+}
+
+:root[data-theme='dark'] .theme-segment:focus-visible {
+  outline-color: #a5d47a;
+}
+
+.profile-divider {
+  width: 100%;
+  margin: 4px 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.profile-logout {
+  display: flex;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #b83d35;
+  border-radius: 12px;
+  background: transparent;
+  color: #b83d35;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+:root[data-theme='dark'] .profile-logout {
+  border-color: #ff9a90;
+  color: #ff9a90;
+}
+
+.profile-logout:focus-visible {
+  outline: 3px solid #b83d35;
+  outline-offset: 2px;
+}
+
+.client-dashboard-content,
+.trainer-dashboard-content {
+  min-width: 0;
+}
+
+.client-dashboard-content > .pull-refresh-hint,
+.trainer-dashboard-content > .pull-refresh-hint {
+  margin: 0 0 8px;
+}
+
+.application-shell .trainer-client-compact .slot-date {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.application-shell .trainer-client-compact .slot-date > span {
+  overflow-wrap: anywhere;
+}
+
+:root[data-theme='dark'] .application-shell .trainer-booking-status {
+  background: #293b2c;
+  color: #c4e5a1;
+}
+
+:root[data-theme='dark'] .application-shell .trainer-booking-status.is-booked {
+  background: #45321e;
+  color: #ffd093;
+}
+
+:root[data-theme='dark'] .application-shell .trainer-icon-button.is-destructive {
+  color: #ffaaa1;
+}
+
+.application-shell .notice {
+  margin: 0 0 14px;
+  padding: 13px 15px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.application-shell .empty-state {
+  padding: 23px 16px;
+  border-radius: 13px;
+  font-size: 13px;
+}
+
+.application-shell .ai-panel .trainer-description {
+  font-size: 14px;
+}
+
+.application-shell .ai-response .slot-card {
+  border-color: #d9e8d2;
+  background: #f6faf4;
+}
+
+.auth-page {
+  padding: 24px 16px;
+}
+
+.auth-card {
+  border-color: var(--line);
+  border-radius: 24px;
+  box-shadow: 0 16px 48px rgb(32 60 49 / 8%);
+}
+
+.auth-card .eyebrow {
+  color: var(--accent-strong);
+  text-align: center;
+}
+
+.auth-brand {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: var(--ink);
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.auth-brand-mark {
+  width: 56px;
+  height: 56px;
+  border-radius: 17px;
+}
+
+.auth-card h1 {
+  margin-bottom: 8px;
+  font-size: clamp(30px, 8vw, 36px);
+  text-align: center;
+}
+
+.auth-card > .intro-copy {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.auth-form {
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.auth-form .name-field {
+  gap: 8px;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.auth-form .name-field input {
+  min-height: 54px;
+  padding: 0 14px;
+  border: 1.5px solid #a4b2a5;
+  border-radius: 12px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.auth-form .name-field input:focus-visible {
+  border-color: #347a42;
+  outline: 3px solid rgb(52 122 66 / 28%);
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px #347a42;
+}
+
+.password-input-wrap {
+  position: relative;
+  display: flex;
+}
+
+.password-input-wrap input {
+  width: 100%;
+  padding-right: 58px !important;
+}
+
+.password-visibility-toggle {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  display: grid;
+  width: 48px;
+  min-height: 48px;
+  place-items: center;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.password-visibility-toggle svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.password-visibility-toggle:focus-visible {
+  outline: 3px solid #347a42;
+  outline-offset: -2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.auth-page.auth-page-compact {
+  overscroll-behavior: none;
+  scrollbar-width: none;
+  padding:
+    calc(16px + env(safe-area-inset-top))
+    max(16px, env(safe-area-inset-right))
+    calc(16px + env(safe-area-inset-bottom))
+    max(16px, env(safe-area-inset-left));
+}
+
+.auth-page.auth-page-compact::-webkit-scrollbar {
+  display: none;
+}
+
+.auth-page-compact .auth-card {
+  min-width: 0;
+  padding: 18px 16px 20px;
+}
+
+.auth-page-compact .auth-card h1 {
+  margin: 4px 0 6px;
+  font-size: clamp(24px, 7vw, 30px);
+  text-wrap: balance;
+}
+
+.auth-page-compact .auth-card > .intro-copy {
+  font-size: 14px;
+  text-wrap: balance;
+}
+
+.auth-page-compact .auth-form {
+  margin-top: 14px;
+  gap: 8px;
+}
+
+.auth-page-compact .auth-form .name-field {
+  gap: 6px;
+}
+
+.auth-page-compact .auth-form .name-field input {
+  min-height: 48px;
+}
+
+.auth-page-compact .password-visibility-toggle {
+  top: 2px;
+  width: 44px;
+  min-height: 44px;
+}
+
+.auth-back-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 4px;
+  margin: -6px 0 0 -8px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--accent-strong);
+  font: inherit;
+  font-weight: 700;
+}
+
+.auth-back-button svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.2;
+}
+
+.auth-back-button:focus-visible {
+  outline: 3px solid #347a42;
+  outline-offset: 1px;
+}
+
+.auth-mandatory-note {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 650;
+  text-align: center;
+}
+
+.auth-secondary {
+  width: 100%;
+  min-height: 48px;
+  border: 1.5px solid #a4b2a5;
+  border-radius: 13px;
+  background: transparent;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+:root[data-theme='dark'] .auth-secondary {
+  border-color: #66766a;
+  background: transparent;
+  color: #e8efe5;
+}
+
+.password-hints {
+  display: grid;
+  gap: 8px;
+  margin-top: -2px;
+}
+
+.password-strength {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.password-strength-bar {
+  position: relative;
+  width: 96px;
+  height: 6px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+.password-strength-bar::after {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0;
+  border-radius: inherit;
+  background: #b83d35;
+  content: '';
+  transition: width 160ms ease;
+}
+
+.password-strength[data-strength='weak'] .password-strength-bar::after {
+  width: 33%;
+}
+
+.password-strength[data-strength='medium'] .password-strength-bar::after {
+  width: 66%;
+  background: #c8801f;
+}
+
+.password-strength[data-strength='strong'] .password-strength-bar::after {
+  width: 100%;
+  background: #347a42;
+}
+
+.password-requirements {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.password-requirements li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.password-requirements svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.4;
+}
+
+.password-requirements li.is-met {
+  color: #347a42;
+}
+
+.password-match {
+  margin: -2px 0 0;
+  color: #b83d35;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.password-match.is-match {
+  color: #347a42;
+}
+
+:root[data-theme='dark'] .password-requirements li.is-met,
+:root[data-theme='dark'] .password-match.is-match,
+:root[data-theme='dark'] .auth-back-button {
+  color: #a5d47a;
+}
+
+:root[data-theme='dark'] .password-match {
+  color: #ff9a90;
+}
+
+:root[data-theme='dark'] .password-strength-bar::after {
+  background: #ff9a90;
+}
+
+:root[data-theme='dark'] .password-strength[data-strength='medium'] .password-strength-bar::after {
+  background: #e6a94d;
+}
+
+:root[data-theme='dark'] .password-strength[data-strength='strong'] .password-strength-bar::after {
+  background: #a5d47a;
+}
+
+.auth-card .auth-submit {
+  min-height: 54px;
+  margin-top: 2px;
+  border: 0;
+  border-radius: 13px;
+  background: #9bca6b;
+  color: #172218;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.auth-card .auth-submit:hover:not(:disabled) {
+  background: #8fbe5f;
+}
+
+.auth-card .auth-submit:disabled {
+  opacity: 0.72;
+  cursor: wait;
+}
+
+.login-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 0;
+  border-color: #d9877e;
+  background: #fff1ef;
+  color: #8d241d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-error svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1.8;
+}
+
+.login-help {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.name-field input:focus,
+.move-field select:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgb(121 185 108 / 17%);
+}
+
+@media (max-width: 760px) {
+  body {
+    min-width: 0;
+  }
+
+  .application-shell {
+    width: 100%;
+    padding: 0 16px calc(104px + env(safe-area-inset-bottom));
+  }
+
+  .application-shell .topbar {
+    height: 66px;
+    margin: 0 -16px;
+    padding: 0 16px;
+  }
+
+  .application-shell .brand {
+    gap: 8px;
+    font-size: 16px;
+  }
+
+  .application-shell .brand-mark {
+    width: 35px;
+    height: 35px;
+    border-radius: 11px;
+  }
+
+  .application-shell .intro {
+    padding: 26px 0 18px;
+  }
+
+  .application-shell .intro h1 {
+    font-size: 32px;
+    line-height: 1.12;
+  }
+
+  .app-navigation {
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: space-around;
+    gap: 2px;
+    margin: 0;
+    padding: 9px 8px calc(9px + env(safe-area-inset-bottom));
+    border: 0;
+    border-top: 1px solid rgb(222 232 225 / 85%);
+    border-radius: 18px 18px 0 0;
+    background: rgb(255 255 255 / 94%);
+    box-shadow: 0 -8px 30px rgb(32 60 49 / 9%);
+  }
+
+  .app-nav-link {
+    min-width: 74px;
+    min-height: 54px;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    padding: 5px 4px;
+    border-radius: 13px;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  .app-nav-link svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .application-shell .slots-panel,
+  .application-shell .my-bookings,
+  .application-shell .trainer-panel,
+  .application-shell .ai-panel {
+    padding: 19px 16px;
+    border-radius: 18px;
+    scroll-margin-top: 82px;
+  }
+
+  .application-shell .my-bookings,
+  .application-shell .ai-panel,
+  .application-shell .trainer-panel + .trainer-panel {
+    margin-top: 14px;
+  }
+
+  .application-shell .section-heading {
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .application-shell .section-heading h2 {
+    min-width: 0;
+    font-size: clamp(16px, 4.8vw, 19px);
+    line-height: 1.22;
+    white-space: nowrap;
+  }
+
+  .application-shell .my-bookings .section-heading {
+    gap: 8px;
+  }
+
+  .application-shell .my-bookings .section-heading > button {
+    width: auto;
+    min-height: 48px;
+    flex: 0 0 auto;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+
+  .application-shell .availability-label {
+    max-width: 48%;
+    align-self: center;
+    padding: 6px 8px;
+    font-size: 10px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .application-shell .slot-card {
+    align-items: stretch;
+    gap: 13px;
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .application-shell .slot-card .book-button,
+  .application-shell .slot-card .cancel-button {
+    width: 100%;
+  }
+
+  .application-shell .appointment-controls,
+  .application-shell .trainer-slot-controls {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .application-shell .appointment-controls .move-field,
+  .application-shell .trainer-slot-controls .move-field {
+    width: 100%;
+  }
+
+  .application-shell .appointment-controls .move-field select,
+  .application-shell .trainer-slot-controls .move-field select {
+    width: 100%;
+    max-width: none;
+  }
+
+  .application-shell .trainer-slot-controls > .cancel-button,
+  .application-shell .trainer-slot-controls > .trainer-actions {
+    grid-column: auto;
+  }
+
+}
+
+.application-shell .intro {
+  padding-bottom: 22px;
+}
+
+.application-shell .intro-copy {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.application-shell .app-navigation {
+  position: sticky;
+  top: 76px;
+  gap: 6px;
+  margin-bottom: 14px;
+  padding: 4px;
+  border: 0;
+  border-radius: 14px;
+  background: #eaece6;
+  box-shadow: none;
+}
+
+.application-shell .app-nav-link {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  color: #657069;
+  cursor: pointer;
+  font: inherit;
+}
+
+.application-shell .app-nav-link.is-active {
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgb(31 43 35 / 10%);
+}
+
+.application-shell .app-nav-link:hover:not(.is-active) {
+  background: rgb(255 255 255 / 55%);
+  color: var(--ink);
+}
+
+.application-shell .dashboard-panel {
+  min-height: 220px;
+  padding: 23px;
+  border: 1px solid #ecece6;
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: 0 8px 24px rgb(31 43 35 / 4%);
+}
+
+.application-shell .slots-panel,
+.application-shell .my-bookings,
+.application-shell .trainer-panel,
+.application-shell .ai-panel {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.application-shell .section-heading {
+  margin-bottom: 18px;
+}
+
+.application-shell .section-heading h2 {
+  white-space: normal;
+}
+
+.application-shell .slot-list {
+  gap: 0;
+}
+
+.application-shell .slot-card {
+  min-height: 68px;
+  padding: 14px 0;
+  border: 0;
+  border-bottom: 1px solid #ecece6;
+  border-radius: 0;
+  background: transparent;
+}
+
+.application-shell .slot-card:last-child {
+  border-bottom: 0;
+}
+
+.application-shell .appointment-card,
+.application-shell .trainer-slot-card,
+.application-shell .trainer-client-card {
+  touch-action: pan-y;
+}
+
+.application-shell .slot-card .book-button {
+  width: auto;
+  min-width: 96px;
+}
+
+.application-shell .appointment-card {
+  align-items: stretch;
+}
+
+.application-shell .appointment-controls {
+  justify-content: flex-start;
+}
+
+.application-shell .trainer-slot-card,
+.application-shell .trainer-client-card {
+  align-items: flex-start;
+}
+
+.application-shell .trainer-client-card {
+  gap: 12px;
+}
+
+.application-shell .trainer-actions {
+  justify-content: flex-start;
+}
+
+.application-shell .empty-state {
+  border: 0;
+  border-radius: 0;
+  background: #f7f7f3;
+  text-align: left;
+}
+
+@media (max-width: 760px) {
+  .application-shell {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom));
+  }
+
+  .application-shell .intro {
+    padding: 24px 0 16px;
+  }
+
+  .application-shell .intro h1 {
+    font-size: 30px;
+  }
+
+  .application-shell .intro-copy {
+    max-width: 34ch;
+    font-size: 13px;
+  }
+
+  .application-shell .app-navigation {
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    justify-content: space-around;
+    gap: 5px;
+    margin: 0;
+    padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+    border-top: 1px solid #e7e8e2;
+    border-radius: 18px 18px 0 0;
+    background: rgb(255 255 255 / 97%);
+    box-shadow: 0 -6px 20px rgb(31 43 35 / 6%);
+    backdrop-filter: blur(16px);
+  }
+
+  .application-shell .app-nav-link {
+    min-width: 0;
+    min-height: 52px;
+    flex-direction: column;
+    gap: 4px;
+    padding: 5px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+  }
+
+  .application-shell .app-nav-link.is-active {
+    background: #edf3e8;
+    color: var(--accent-strong);
+    box-shadow: none;
+  }
+
+  .application-shell .dashboard-panel {
+    min-height: 0;
+    padding: 20px 17px;
+    border-radius: 18px;
+  }
+
+  .application-shell .section-heading {
+    align-items: flex-start;
+  }
+
+  .application-shell .trainer-schedule-heading {
+    align-items: center;
+  }
+
+  .application-shell .section-heading h2 {
+    font-size: 20px;
+  }
+
+  .application-shell .section-heading .eyebrow {
+    margin-bottom: 5px;
+  }
+
+  .application-shell .availability-label {
+    max-width: none;
+    white-space: nowrap;
+  }
+
+  .application-shell .trainer-panel .section-heading .availability-label {
+    align-self: flex-end;
+    max-width: 100%;
+  }
+
+  .application-shell .trainer-add-form,
+  .application-shell .trainer-add-form .name-field,
+  .application-shell .trainer-add-form .name-field input {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .application-shell .slot-card {
+    align-items: center;
+    flex-direction: row;
+    gap: 12px;
+    padding: 15px 0;
+  }
+
+  .application-shell .slot-card .book-button,
+  .application-shell .slot-card .cancel-button {
+    width: auto;
+    flex: 0 0 auto;
+  }
+
+  .application-shell .slot-date {
+    min-width: 0;
+    font-size: 12px;
+  }
+
+  .application-shell .slot-date strong {
+    font-size: 18px;
+  }
+
+  .application-shell .appointment-card,
+  .application-shell .trainer-slot-card,
+  .application-shell .trainer-client-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .application-shell .appointment-controls .book-button,
+  .application-shell .appointment-controls .cancel-button,
+  .application-shell .trainer-slot-controls .cancel-button,
+  .application-shell .trainer-actions .cancel-button {
+    width: 100%;
+  }
+
+  .application-shell .trainer-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .application-shell .trainer-add-form,
+  .application-shell .ai-form {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .application-shell .trainer-add-form .book-button,
+  .application-shell .ai-form > .book-button {
+    width: 100%;
+  }
+
+}
+
+body {
+  min-width: 0;
+}
+
+.application-shell {
+  width: min(100%, 480px);
+  min-height: 100dvh;
+  padding: env(safe-area-inset-top) 16px calc(100px + env(safe-area-inset-bottom));
+}
+
+.application-shell .topbar {
+  top: env(safe-area-inset-top);
+  height: 64px;
+}
+
+.application-shell .brand {
+  min-height: 48px;
+}
+
+.application-shell .intro {
+  padding: 22px 0 18px;
+}
+
+.application-shell .intro h1 {
+  font-size: 30px;
+}
+
+.application-shell .app-navigation {
+  position: fixed;
+  z-index: 10;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 50%;
+  width: min(100%, 480px);
+  min-height: 64px;
+  justify-content: space-around;
+  gap: 2px;
+  margin: 0;
+  padding: 7px 8px calc(7px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 18px 18px 0 0;
+  background: color-mix(in srgb, var(--paper) 96%, transparent);
+  box-shadow: 0 -6px 20px rgb(31 43 35 / 7%);
+  backdrop-filter: blur(16px);
+}
+
+.application-shell .app-nav-link {
+  min-width: 0;
+  min-height: 48px;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  padding: 5px 3px;
+  border-radius: 12px;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.application-shell .app-nav-link:active,
+.application-shell .book-button:active:not(:disabled),
+.application-shell .cancel-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.application-shell .app-nav-link svg {
+  width: 21px;
+  height: 21px;
+}
+
+.application-shell .dashboard-panel {
+  padding: 20px 17px;
+}
+
+.application-shell .book-button,
+.application-shell .cancel-button,
+.application-shell .name-field input,
+.application-shell .move-field select,
+.application-shell .trainer-actions button {
+  min-height: 48px;
+}
+
+.application-shell .trainer-today-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.application-shell .trainer-today-summary-link {
+  display: grid;
+  min-height: 48px;
+  gap: 4px;
+  padding: 14px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--page);
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.application-shell .trainer-today-summary-link:active {
+  transform: scale(0.98);
+}
+
+.application-shell .trainer-today-summary-link:focus-visible {
+  outline: 3px solid var(--accent-strong);
+  outline-offset: 2px;
+}
+
+.application-shell .trainer-today-summary strong {
+  color: var(--ink);
+  font-size: 22px;
+}
+
+.application-shell .trainer-today-summary span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.bottom-sheet {
+  position: fixed;
+  inset: auto 0 0;
+  width: min(100%, 480px);
+  max-width: none;
+  max-height: 90vh;
+  max-height: 90dvh;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  overscroll-behavior: contain;
+  border: 1px solid var(--line);
+  border-bottom: 0;
+  border-radius: 24px 24px 0 0;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 -16px 50px rgb(0 0 0 / 16%);
+}
+
+.bottom-sheet[open] {
+  display: flex;
+  flex-direction: column;
+  animation: bottom-sheet-enter 180ms ease-out;
+}
+
+.bottom-sheet::backdrop {
+  background: rgb(13 21 16 / 42%);
+  backdrop-filter: blur(2px);
+}
+
+.bottom-sheet-drag-zone {
+  flex: 0 0 auto;
+  padding: 10px 20px 12px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.bottom-sheet-handle {
+  width: 38px;
+  height: 4px;
+  margin: 0 auto;
+  border-radius: 999px;
+  background: #cbd1cb;
+}
+
+.bottom-sheet-header h2:focus {
+  outline: none;
+}
+
+.bottom-sheet-close:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.bottom-sheet-close:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.bottom-sheet-header {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+  padding: 0 20px;
+}
+
+.bottom-sheet-header h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.bottom-sheet-header p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.bottom-sheet-close {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--page);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.bottom-sheet-close svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.bottom-sheet-content {
+  display: grid;
+  min-height: 0;
+  flex: 1 1 auto;
+  align-content: start;
+  gap: 12px;
+  padding: 10px 20px calc(20px + env(safe-area-inset-bottom));
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.bottom-sheet-content.is-split {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.bottom-sheet-content.is-split > .notice {
+  flex: 0 0 auto;
+  margin: 0 20px 8px;
+}
+
+.bottom-sheet-field {
+  margin-bottom: 6px;
+}
+
+.bottom-sheet-field select {
+  width: 100%;
+}
+
+.application-shell .edit-appointment-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  min-width: 0;
+}
+
+.application-shell .edit-appointment-form .bottom-sheet-field {
+  display: grid;
+  min-width: 0;
+  margin: 0;
+  gap: 6px;
+}
+
+.application-shell .edit-appointment-form select {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 52px;
+  font-size: 16px;
+}
+
+.application-shell .edit-appointment-form select:focus {
+  outline: none;
+}
+
+.application-shell .edit-appointment-form select:focus-visible {
+  outline: 3px solid var(--accent-strong);
+  outline-offset: 2px;
+}
+
+.application-shell .field-hint {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.application-shell .field-hint.is-warning {
+  color: #b3261e;
+}
+
+:root[data-theme='dark'] .application-shell .field-hint.is-warning {
+  color: #f2b8b5;
+}
+
+.bottom-sheet-primary,
+.bottom-sheet-actions > button {
+  width: 100%;
+  min-height: 52px;
+}
+
+.bottom-sheet-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.bottom-sheet .bottom-sheet-destructive {
+  border-color: #b83d35;
+  background: #b83d35;
+  color: #fff;
+}
+
+.bottom-sheet .bottom-sheet-destructive:hover:not(:disabled) {
+  border-color: #982c26;
+  background: #982c26;
+  color: #fff;
+}
+
+.pull-refresh-hint {
+  min-height: 0;
+  margin: -8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.pull-refresh-hint:not(:empty) {
+  min-height: 30px;
+  padding: 8px 0;
+}
+
+.bookings-touch-area {
+  touch-action: pan-x pan-y;
+  overscroll-behavior-y: contain;
+}
+
+@keyframes bottom-sheet-enter {
+  from {
+    opacity: 0.6;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-page {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  min-height: 100dvh;
+  align-items: start;
+  justify-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  padding:
+    clamp(38px, 8dvh, 78px)
+    max(16px, env(safe-area-inset-right))
+    calc(32px + env(safe-area-inset-bottom))
+    max(16px, env(safe-area-inset-left));
+}
+
+.auth-page > .theme-toggle {
+  position: fixed;
+  z-index: 5;
+  top: calc(env(safe-area-inset-top) + 12px);
+  right: max(16px, calc((100vw - 480px) / 2 + 16px));
+}
+
+.auth-card {
+  width: min(100%, 480px);
+}
+
+:root[data-theme='dark'] .auth-form .name-field input {
+  border-color: #66766a;
+  background: #1a211c;
+}
+
+:root[data-theme='dark'] .auth-form .name-field input:focus-visible {
+  border-color: #8ccf83;
+  outline-color: rgb(140 207 131 / 32%);
+  box-shadow: 0 0 0 1px #8ccf83;
+}
+
+:root[data-theme='dark'] .auth-card .auth-submit {
+  background: #a5d47a;
+  color: #172218;
+}
+
+:root[data-theme='dark'] .login-error {
+  border-color: #a75850;
+  background: #3a211f;
+  color: #ffd4ce;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  color: var(--ink);
+  background: var(--page);
+  --ink: #edf1eb;
+  --muted: #a8b2a9;
+  --paper: #202721;
+  --line: #39443b;
+  --page: #151b17;
+  --accent: #a5d47a;
+  --accent-strong: #a5d47a;
+  --accent-soft: #29372b;
+}
+
+:root[data-theme='dark'] body {
+  background: var(--page);
+  color: var(--ink);
+}
+
+:root[data-theme='dark'] .application-shell .topbar {
+  border-bottom-color: var(--line);
+  background: rgb(21 27 23 / 94%);
+}
+
+:root[data-theme='dark'] .application-shell .dashboard-panel,
+:root[data-theme='dark'] .auth-card {
+  border-color: var(--line);
+  background: var(--paper);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+}
+
+:root[data-theme='dark'] .application-shell .app-navigation {
+  border-top-color: var(--line);
+  background: rgb(32 39 33 / 96%);
+  box-shadow: 0 -6px 20px rgb(0 0 0 / 18%);
+}
+
+:root[data-theme='dark'] .application-shell .app-nav-link.is-active {
+  background: #303b32;
+  color: #c4e5a1;
+}
+
+:root[data-theme='dark'] .application-shell .availability-label {
+  background: #2b392d;
+  color: #c4e5a1;
+}
+
+:root[data-theme='dark'] .application-shell .book-button {
+  border-color: #a5d47a;
+  background: #a5d47a;
+  color: #172218;
+}
+
+:root[data-theme='dark'] .application-shell .book-button:hover:not(:disabled) {
+  border-color: #b8e28f;
+  background: #b8e28f;
+}
+
+:root[data-theme='dark'] .application-shell .cancel-button {
+  border-color: var(--line);
+  background: #29322b;
+  color: var(--ink);
+}
+
+:root[data-theme='dark'] .application-shell .name-field input,
+:root[data-theme='dark'] .application-shell .move-field select {
+  border-color: var(--line);
+  background: #1a211c;
+  color: var(--ink);
+}
+
+:root[data-theme='dark'] .application-shell .slot-card {
+  border-bottom-color: var(--line);
+}
+
+:root[data-theme='dark'] .application-shell .empty-state,
+:root[data-theme='dark'] .application-shell .trainer-today-summary-link {
+  background: #262f28;
+  color: var(--muted);
+}
+
+:root[data-theme='dark'] .application-shell .ai-response .slot-card {
+  background: #28352a;
+}
+
+:root[data-theme='dark'] .auth-card .name-field input {
+  border-color: var(--line);
+  background: #1a211c;
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .application-shell .trainer-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .application-shell .trainer-client-card {
+    align-items: stretch;
+  }
+
+  .application-shell .trainer-add-form {
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .application-shell .trainer-add-form .name-field {
+    margin-bottom: 8px;
+  }
+
+  .application-shell .trainer-add-form .book-button {
+    width: 100%;
+  }
+
+  .application-shell .ai-form {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .application-shell .ai-form .name-field {
+    margin-bottom: 8px;
+  }
+
+  .application-shell .ai-form .book-button {
+    width: 100%;
+  }
+
+  .application-shell .ai-response .slot-card {
+    align-items: stretch;
+  }
+
+  .auth-page {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding:
+      calc(30px + env(safe-area-inset-top))
+      max(16px, env(safe-area-inset-right))
+      calc(32px + env(safe-area-inset-bottom))
+      max(16px, env(safe-area-inset-left));
+  }
+
+  .auth-card {
+    width: 100%;
+    padding: 28px 22px;
+    border-radius: 21px;
+  }
+}
+
+@media (max-width: 760px) and (max-height: 740px) {
+  .auth-page {
+    overflow-y: auto;
+    padding-top: calc(16px + env(safe-area-inset-top));
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+
+  .auth-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  html,
+  body,
+  #root {
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  body {
+    min-width: 0;
+  }
+
+  .auth-page {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    align-content: safe center;
+  }
+
+  .application-shell {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    flex-direction: column;
+    overflow: hidden;
+    padding: env(safe-area-inset-top) 16px 0;
+    overscroll-behavior: none;
+  }
+
+  .application-shell .topbar,
+  .application-shell .intro {
+    flex: 0 0 auto;
+  }
+
+  .application-shell .trainer-slot-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .application-shell .dashboard-scroll-area {
+    min-height: 0;
+    flex: 1 1 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: calc(64px + env(safe-area-inset-bottom));
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .application-shell .dashboard-panel {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.application-shell .trainer-slot-card,
+.application-shell .trainer-client-compact {
+  align-items: center;
+  flex-direction: row;
+}
+
+.application-shell .trainer-slot-controls,
+.application-shell .trainer-actions {
+  display: flex;
+  grid-column: auto;
+  grid-template-columns: none;
+  align-items: center;
+  gap: 4px;
+  width: auto;
+}
+
+.application-shell .trainer-client-compact .slot-date {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.application-shell .day-strip {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  margin: 0 -4px 12px;
+  padding: 4px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+}
+
+.application-shell .day-strip.slot-day-strip {
+  margin: 0 -20px;
+  padding: 4px 20px;
+  scroll-padding: 0 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.application-shell .slot-day-strip .day-chip {
+  min-width: 0;
+  flex-basis: calc((100% - 12px) / 4.5);
+}
+
+.application-shell .day-chip {
+  position: relative;
+  display: grid;
+  min-width: 64px;
+  min-height: 76px;
+  flex: 0 0 auto;
+  place-items: center;
+  gap: 0;
+  padding: 8px 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  scroll-snap-align: start;
+}
+
+.application-shell .day-chip span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.application-shell .day-chip strong {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.application-shell .day-chip[aria-pressed='true'] {
+  border-color: var(--accent-strong);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent-strong);
+}
+
+.application-shell .day-chip:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.application-shell .day-dot {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: transparent;
+  transform: translateX(-50%);
+}
+
+.application-shell .day-dot.is-booked {
+  background: var(--accent-strong);
+}
+
+.application-shell .day-heading {
+  margin: 4px 0 8px;
+  font-size: 16px;
+}
+
+.application-shell .day-booking-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+  margin-bottom: 8px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--accent-soft);
+}
+
+.application-shell .day-booking-note p {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.application-shell .day-booking-note .cancel-button {
+  min-height: 48px;
+}
+
+.application-shell .slot-card.is-locked .slot-date,
+.application-shell .slot-card.is-locked .slot-date strong {
+  color: var(--muted);
+}
+
+.application-shell .locked-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.application-shell .lock-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.application-shell .dashboard-scroll-area {
+  padding-top: 14px;
+}
+
+.trainer-person {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+}
+
+.trainer-avatar {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e7f3e9;
+  color: #1f4a36;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.trainer-person-name {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+:root[data-theme='dark'] .trainer-avatar {
+  background: #2d4033;
+  color: #d6efcf;
+}
+
+.application-shell .trainer-slot-card.is-past .trainer-person-name {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.trainer-past-section {
+  margin-top: 18px;
+  padding-top: 4px;
+  border-top: 1px solid var(--line);
+}
+
+.trainer-past-section > summary {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.application-shell .trainer-slot-card.is-past,
+.application-shell .appointment-card.is-past {
+  background: transparent;
+  box-shadow: none;
+}
+
+.application-shell .appointment-card.is-past .slot-date,
+.application-shell .appointment-card.is-past .slot-date * {
+  color: var(--muted);
+}
+
+.application-shell .trainer-slot-card.is-past .trainer-slot-time {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.application-shell .trainer-slot-card.is-past .trainer-booking-status,
+:root[data-theme='dark'] .application-shell .trainer-slot-card.is-past .trainer-booking-status {
+  background: transparent;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* Οθόνη «Ασκούμενοι» */
+.application-shell .trainer-client-compact {
+  min-width: 0;
+  max-width: 100%;
+  gap: 8px;
+}
+
+.application-shell .trainer-client-compact .slot-date strong {
+  overflow-wrap: anywhere;
+}
+
+.application-shell .trainer-client-compact.is-inactive .slot-date {
+  opacity: 0.55;
+}
+
+.application-shell .inactive-badge {
+  margin-left: 8px;
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.application-shell .client-more-button {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.application-shell .client-search input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  margin-bottom: 12px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.application-shell .new-client-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
+.application-shell .new-client-form input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 52px;
+  font-size: 16px;
+}
+
+.application-shell .client-action-list {
+  display: grid;
+  gap: 10px;
+}
+
+.application-shell .client-action {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 60px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--ink);
+  text-align: left;
+}
+
+.application-shell .client-action svg {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.application-shell .client-action span {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+}
+
+.application-shell .client-action small {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.application-shell .client-action.is-destructive {
+  margin-top: 10px;
+  border-color: #b3261e;
+  color: #b3261e;
+}
+
+:root[data-theme='dark'] .application-shell .client-action.is-destructive {
+  border-color: #f2b8b5;
+  color: #f2b8b5;
+}
+
+/* Κάρτα προσωρινού κωδικού */
+.application-shell .credentials-card {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  margin-bottom: 16px;
+  padding: 18px;
+  border-radius: 16px;
+  background: #24513c;
+  color: #fff;
+}
+
+.application-shell .credentials-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.application-shell .credentials-fields {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 12px;
+}
+
+.application-shell .credentials-fields dt {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.application-shell .credentials-fields dd {
+  min-width: 0;
+  max-width: 100%;
+  margin: 2px 0 0;
+  overflow-wrap: anywhere;
+}
+
+.application-shell .credentials-username {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.application-shell .credentials-password {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: clamp(1.25rem, 7vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  user-select: all;
+}
+
+.application-shell .credentials-warning {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.application-shell .credentials-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.application-shell .credentials-actions.has-share {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.application-shell .credentials-card button {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid rgb(255 255 255 / 0.6);
+  border-radius: 12px;
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+}
+
+.application-shell .credentials-card .credentials-done {
+  border-color: #fff;
+  background: #fff;
+  color: #24513c;
+}
+
+.application-shell .intro {
+  padding: 14px 0 6px;
+}
+
+.application-shell .intro h1 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.application-shell .intro-copy {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+
+.application-shell .screen-badge-row {
+  display: flex;
+  margin: 0 0 12px;
+}
+
+.application-shell .day-dot.is-booked,
+.application-shell .day-dot-inline {
+  background: #e08a1e;
+}
+
+:root[data-theme='dark'] .application-shell .day-dot.is-booked,
+:root[data-theme='dark'] .application-shell .day-dot-inline {
+  background: #ffb45e;
+}
+
+.application-shell .day-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.application-shell .day-dot-inline {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-radius: 50%;
+}
+
+.application-shell .slot-card.is-locked {
+  min-height: 52px;
+  padding: 8px 14px;
+  opacity: 0.6;
+}
+
+.application-shell .slot-card.is-locked .slot-date strong {
+  font-size: 16px;
+}
+
+.application-shell .slot-card.is-locked .locked-label {
+  font-size: 13px;
+}
+
+.application-shell .move-appointment-form {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+}
+
+.application-shell .move-summary {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--accent-soft);
+}
+
+.application-shell .move-summary p {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.application-shell .move-summary .move-summary-new {
+  color: var(--accent-strong);
+}
+
+.application-shell .next-appointment-card {
+  display: grid;
+  min-width: 0;
+  gap: 6px;
+  margin-bottom: 14px;
+  padding: 18px;
+  border: 1px solid var(--accent-strong);
+  border-radius: 18px;
+  background: var(--accent-soft);
+  touch-action: pan-y;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.application-shell .next-appointment-eyebrow {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.application-shell .next-appointment-when {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.application-shell .next-appointment-when span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.application-shell .next-appointment-when .lock-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.application-shell .next-appointment-date {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.application-shell .appointment-card {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.application-shell .is-leaving {
+  opacity: 0;
+  transform: translateX(-24px);
+}
+
+.application-shell .empty-appointments {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 28px 16px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.application-shell .empty-appointments .lock-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.application-shell .empty-appointments p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.application-shell .ai-form textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 72px;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  outline: none;
+  background: #fbfcfb;
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  resize: none;
+  overflow-y: auto;
+}
+
+.application-shell .ai-form textarea::placeholder {
+  color: var(--muted);
+}
+
+.application-shell .ai-form textarea:focus-visible {
+  border-color: var(--accent-strong);
+  outline: 3px solid var(--accent-strong);
+  outline-offset: 1px;
+}
+
+:root[data-theme='dark'] .application-shell .ai-form textarea {
+  border-color: var(--line);
+  background: #1a211c;
+  color: var(--ink);
+}
+
+:root[data-theme='dark'] .application-shell .ai-form textarea:focus-visible {
+  border-color: #a5d47a;
+  outline-color: #a5d47a;
+}
+
+.application-shell .ai-chips {
+  display: flex;
+  gap: 8px;
+  margin: 0 -16px 12px;
+  padding: 0 16px 4px;
+  overflow-x: auto;
+  scroll-padding-inline: 16px;
+  scrollbar-width: none;
+}
+
+.application-shell .ai-chips::-webkit-scrollbar {
+  display: none;
+}
+
+.application-shell .ai-chip {
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.application-shell .ai-chip:disabled {
+  opacity: 0.55;
+}
+
+.application-shell .ai-chip:focus-visible {
+  outline: 3px solid var(--accent-strong);
+  outline-offset: 2px;
+}
+
+:root[data-theme='dark'] .application-shell .ai-chip {
+  background: #232d25;
+  color: #a5d47a;
+}
+
+.application-shell .ai-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.application-shell .ai-disclaimer svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+}
+
+.application-shell .char-counter {
+  justify-self: end;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.application-shell .later-title {
+  margin: 18px 0 2px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.application-shell .later-list .appointment-card {
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 10px;
+  padding: 12px 0;
+}
+
+.application-shell .later-list .slot-date {
+  min-width: 160px;
+  flex: 1 1 160px;
+}
+
+.application-shell .later-list .slot-date strong {
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.application-shell .later-list .slot-date span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.application-shell .later-list .appointment-controls {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 6px;
+  width: auto;
+}
+
+.application-shell .later-list .appointment-controls button {
+  width: auto;
+  min-height: 44px;
+  padding: 0 10px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.application-shell .later-list .appointment-controls .cancel-button {
+  padding: 0 8px;
+}
+
+.application-shell .later-list .appointment-controls .outline-button {
+  border: 1px solid var(--accent-strong);
+  background: transparent;
+  color: var(--accent-strong);
+  font-weight: 750;
+}
+
+.application-shell .later-list .appointment-controls .cancel-button {
+  border-color: transparent;
+  background: transparent;
+  color: #b83d35;
+}
+
+:root[data-theme='dark'] .application-shell .later-list .appointment-controls .outline-button {
+  border-color: #a5d47a;
+  color: #a5d47a;
+}
+
+:root[data-theme='dark'] .application-shell .later-list .appointment-controls .cancel-button {
+  color: #ff9a90;
+}
+
+.application-shell .later-list .appointment-controls button:disabled {
+  opacity: 0.5;
+}
+
+.application-shell .show-all-button {
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  background: transparent;
+  color: var(--accent-strong);
+  font-size: 14px;
+  font-weight: 750;
+}
+
+:root[data-theme='dark'] .application-shell .show-all-button {
+  color: #a5d47a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .application-shell .next-appointment-card,
+  .application-shell .appointment-card {
+    transition: none;
+  }
+}
